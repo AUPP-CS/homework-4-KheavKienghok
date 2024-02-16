@@ -1,0 +1,44 @@
+{
+  "tests": [
+    {
+      "name": "test_encryption.py",
+      "setup": "sudo -H pip3 install pytest",
+      "run": "pytest test_encryption.py",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 1,
+      "points": 3
+    },
+    {
+      "name": "test_decryption.py",
+      "setup": "sudo -H pip3 install pytest",
+      "run": "pytest test_decryption.py",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 1,
+      "points": 3
+    },
+    {
+      "name": "test_invalid_option.py",
+      "setup": "sudo -H pip3 install pytest",
+      "run": "pytest test_invalid_option.py",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 1,
+      "points": 2
+    },
+    {
+      "name": "test_invalid_shift.py",
+      "setup": "sudo -H pip3 install pytest",
+      "run": "pytest test_invalid_shift.py",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 1,
+      "points": 2
+    }
+  ]
+}
