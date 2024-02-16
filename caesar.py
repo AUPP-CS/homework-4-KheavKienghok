@@ -13,4 +13,30 @@ The caesar function will be used to encrypt or decrypt user input.
 def caesar(text, shift, operation):    
     alphabet = 'abcdefghijklmnopqrstuvwxyz'
     # Your code goes here
-    pass
+    try:
+        shift = int(shift)
+        if shift < 0 or shift > 25:
+            return "invalid shift"
+    except ValueError:
+        return "invalid shift"
+    
+    if operation not in ["e", "d"]:
+        return "invalid option"
+    
+    result = ""
+    
+    for character in text:
+        if character.isalpha():
+            character = character.lower()
+            
+            if operation == "e": 
+                shifted_index = (alphabet.index(character) + shift) % 26
+            elif operation == "d": 
+                shifted_index = (alphabet.index(character) - shift) % 26
+            
+            shifted_char = alphabet[shifted_index]
+            result += shifted_char
+        else:
+            result += character
+    
+    return result
